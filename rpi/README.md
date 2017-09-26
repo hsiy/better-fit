@@ -19,7 +19,12 @@ Choose a display from:
 
 The code structure is organized as follows:
 
-![Code structure](https://yuml.me/diagram/plain;dir:LR/class/[readsensor]->[<<display>>], [<<display>>]^-.-[printOut], [<<display>>]^-.-[plotlyOut], [readsensor]->[<<sensorapi>>], [<<sensorapi>>]^-.-[dummysensor], [<<sensorapi>>]^-.-[mpu6050api], [<<sensorapi>>]^-.-[lsm9ds0api])
+![Code structure](https://yuml.me/diagram/plain;dir:LR/class/[readsensor]-%3E[%3C%3Cdisplay%3E%3E],%20[%3C%3Cdisplay%3E%3E]%5E-.-[printOut],%20[%3C%3Cdisplay%3E%3E]%5E-.-[plotlyOut],%20[readsensor]-%3E[%3C%3Csensorapi%3E%3E],%20[%3C%3Csensorapi%3E%3E]%5E-.-[dummysensor],%20[%3C%3Csensorapi%3E%3E]%5E-.-[mpu6050api],%20[%3C%3Csensorapi%3E%3E]%5E-.-[lsm9ds0api])
+
+<!--- 
+Original code passed to yuml.me:
+https://yuml.me/diagram/plain;dir:LR/class/[readsensor]->[<<display>>], [<<display>>]^-.-[printOut], [<<display>>]^-.-[plotlyOut], [readsensor]->[<<sensorapi>>], [<<sensorapi>>]^-.-[dummysensor], [<<sensorapi>>]^-.-[mpu6050api], [<<sensorapi>>]^-.-[lsm9ds0api] 
+--->
 
 Note that sensorapi and display are just placeholders representing the real modules.
 
