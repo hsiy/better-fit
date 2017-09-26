@@ -1,12 +1,13 @@
 
 ## Generic sensor interaction code
 
-This code provides a refreence implementation for integrating multiple sensor APIs. 
+This code provides a reference implementation for integrating Raspberry Pi with multiple sensor APIs. 
 
-The main code is readsensor.py which continuously reads from a sensor and outputs the readings to a specified display. Its usage is:
+The main code is readsensor.py which continuously reads from a sensor and outputs the readings to a specified display. From the Raspberry Pi terminal, type:
 
 ```
 python readsensor.py mpu|lsm|dummy [print|plotly]
+# brackets "[]" mean optional parameters; type without brackets
 ```
 Choose a sensor from:
 * mpu (MPU6050)
