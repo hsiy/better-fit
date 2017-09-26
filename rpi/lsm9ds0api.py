@@ -140,3 +140,5 @@ def readMag():
 	return readMagX(), readMagY(), readMagZ()
 
 def readScaledMag():
+	return readMag()
+
