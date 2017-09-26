@@ -59,3 +59,24 @@ def readScaledAccel():
 	return ax/scale, ay/scale, az/scale
 
 
+def readGyroX():
+	return read_word_2c(0x43)
+
+
+def readGyroY():
+	return read_word_2c(0x45)
+
+
+def readGyroZ():
+	return read_word_2c(0x47)
+
+	
+def readGyro():
+	return readGyroX(), readGyroY(), readGyroZ()
+
+	
+def readScaledGyro():
+	ax, ay, az = readGyro()
+	scale = 131.0
+	return ax/scale, ay/scale, az/scale
+
