@@ -5,7 +5,7 @@ import time
 import sys
 
 if len(sys.argv) < 2:
-	print 'Usage: ' + sys.argv[0] + ' mpu|lsm [print|plotly]'
+	print 'Usage: ' + sys.argv[0] + ' mpu|lsm [print|plotly|matplot]'
 	sys.exit()
 
 if sys.argv[1] == 'mpu':
@@ -15,8 +15,13 @@ elif sys.argv[1] == 'lsm':
 else:
 	from dummysensor import *
 
-if len(sys.argv) > 2 and sys.argv[2] == 'plotly':
-	from plotlyOut import *
+if len(sys.argv) > 2:
+	if sys.argv[2] == 'plotly':
+		from plotlyOut import *
+	elif sys.argv[2] == 'matplot':
+		from matplotOut import *
+	else:
+		from printOut import *
 else:
 	from printOut import *
 
@@ -27,7 +32,7 @@ initSensor()
 while True:
 	ax, ay, az = readAccel()
 	displayValues([ax, ay, az])
-	time.sleep(0.5)
+	time.sleep(0.01)
 
 
 
